@@ -11,10 +11,10 @@
 </head>
 <body>
   <header>
-    <img class="logo" src="assets/images/logo-large.svg">
-    <img class="logo-mobile" src="assets/images/logo-small.svg">
+    <img class="logo" src="assets/images/logo-large.svg" alt="Typing Test Logo">
+    <img class="logo-mobile" src="assets/images/logo-small.svg" alt="Typing Test Logo">
     <div class="score">
-      <img src="assets/images/icon-personal-best.svg" alt="score-icon">
+      <img src="assets/images/icon-personal-best.svg" alt="Personal best icon">
       <p>
         <span class="score-title">Personal best:</span>
         <span class="score-title-mobile">Best:</span>
@@ -22,6 +22,7 @@
       </p>
     </div>
   </header>
+  <h1 class="visually-hidden">Typing Speed Test Application</h1>
   <main>
     <div class="words-app">
       <div class="flex-container column-mobile">
@@ -43,7 +44,7 @@
               <span class="current-difficulties">
                 Easy
               </span>
-              <img src="assets/images/icon-down-arrow.svg">
+              <img src="assets/images/icon-down-arrow.svg" alt="Dropdown arrow">
             </div>
             <div class="dropdown-mobile">
               <input name="difficulty" type="radio" id="easy" class="difficulty visually-hidden" value="easy">
@@ -66,7 +67,7 @@
               <span class="current-mode">
                 Timed (60s)
               </span>
-              <img src="assets/images/icon-down-arrow.svg">
+              <img src="assets/images/icon-down-arrow.svg" alt="Dropdown arrow">
             </div>
             <div class="dropdown-mobile">
               <input name="mode" class="mode visually-hidden" type="radio" id="timed" value="timed">
@@ -104,11 +105,11 @@
     </div>
     <div class="results visually-hidden">
       <div class="results-icon results-icon-complete">
-        <img class="result-icon" src="assets/images/icon-completed.svg">
-        <img class="result-icon-new-score" src="assets/images/icon-new-pb.svg">
+        <img class="result-icon" src="assets/images/icon-completed.svg" alt="Completed icon">
+        <img class="result-icon-new-score" src="assets/images/icon-new-pb.svg" alt="New personal best icon">
       </div>
-      <h2 class="test-finished-title"></h2>
-      <p class="test-finished-description"></p>
+      <h2 class="test-finished-title">Test Completed</h2>
+      <p class="test-finished-description">Your results are shown below.</p>
       <ul class="scores-list">
         <li>WPM: <p class="wpm"></p></li>
         <li>Accuracy: <p class="accuracy"></p></li>
@@ -120,7 +121,7 @@
         </li>
       </ul>
       <button class="btn btn-finish-restart">
-        <span></span>
+        <span>Restart</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
           <path fill="#000" d="M1.563 1.281h.949c.246 0 .422.211.422.457l-.07 3.446a8.6 8.6 0 0 1 7.277-3.868c4.816 0 8.718 3.938 8.718 8.72-.035 4.816-3.937 8.683-8.718 8.683a8.86 8.86 0 0 1-5.871-2.215.446.446 0 0 1 0-.633l.703-.703c.14-.14.386-.14.562 0 1.23 1.09 2.813 1.723 4.606 1.723A6.88 6.88 0 0 0 17.03 10c0-3.797-3.093-6.89-6.89-6.89-2.813 0-5.203 1.687-6.293 4.078l4.43-.106c.245 0 .456.176.456.422v.95c0 .245-.21.421-.421.421h-6.75a.406.406 0 0 1-.422-.422v-6.75c0-.21.175-.422.422-.422"/>
         </svg>
