@@ -404,14 +404,18 @@ const restartTest = (evt) => {
   resetText();
   resetStats(true);
   startTypingTest();
-  mobileInput.focus();
+  mobileInput.focus({ preventScroll: true });
 };
 
 const handleKeydown = (evt) => {
-  if (
-    allowedKeyCodes.some((allowedKey) => evt.code.includes(allowedKey)) &&
-    cursorChars.remainingChars.length > 0
-  ) {
+  const isMobile = !evt.code;
+  let allowKeyCodeValidation = allowedKeyCodes.some((allowedKey) =>
+    evt.code.includes(allowedKey),
+  );
+  if (isMobile) {
+    allowKeyCodeValidation = true;
+  }
+  if (allowKeyCodeValidation && cursorChars.remainingChars.length > 0) {
     const char = cursorChars.remainingChars.shift();
     const currentCharEl = document.getElementsByClassName("current")[0];
     cursorChars.typedChars.push(char);
@@ -521,10 +525,10 @@ const startOnClick = () => {
     blurMask.classList.remove("active");
     startContainer.classList.add("hide");
     startTypingTest();
-    mobileInput.focus();
+    mobileInput.focus({ preventScroll: true });
   }
   if (document.activeElement !== mobileInput) {
-    mobileInput.focus();
+    mobileInput.focus({ preventScroll: true });
   }
 };
 

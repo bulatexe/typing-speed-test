@@ -481,7 +481,9 @@ span.incorrect::after {
 
 .typing-input-mobile {
 	display: none;
-	position: absolute;
+	position: fixed;
+	top: 0;
+	left: 0;
 	pointer-events: none;
 }
 
